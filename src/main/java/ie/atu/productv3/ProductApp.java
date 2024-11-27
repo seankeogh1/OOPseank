@@ -1,6 +1,8 @@
 package ie.atu.productv3;
 
 import ie.atu.productv2.Book;
+import ie.atu.productv2.Software;
+import ie.atu.productv2.SoftwareDB;
 
 import java.util.Scanner;
 
@@ -21,26 +23,15 @@ public class ProductApp {
             // either a book object or a software object could be returned from the ProductDb class.
             // We need to update the code so that we can handle either type of object returned.
 
-            // Book or a Software Object? = ProductDB.getProduct(productCode);
+            Product p = ProductDB.getProduct(productCode);
 
             // display the output
-            /*
             System.out.println();
             if (p != null) {
-                System.out.println("Description: " + p.toString());
-                System.out.println("Price:       " + p.getPriceFormatted());
+                System.out.println("Description: " + p .toString());
+                System.out.println("Price:       " + p .getPriceFormatted());
             } else {
-                System.out.println("No product matches this product code.");
-            }
-
-            System.out.println();
-            System.out.println("Product count: " + Product.getCount() + "\n");
-
-            // see if the user wants to continue
-            System.out.print("Continue? (y/n): ");
-            choice = sc.nextLine();
-            System.out.println();
-            */
-        }
+                System.out.println("No Software matches this Software code.");
+            }        }
     }
 }
