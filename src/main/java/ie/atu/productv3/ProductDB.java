@@ -1,12 +1,13 @@
 package ie.atu.productv3;
 
-import ie.atu.productv2.Book;
-import ie.atu.productv2.Software;
+import ie.atu.productv3.Book;
+import ie.atu.productv3.Software;
 
 public class ProductDB {
 
         public static Product getProduct(String productCode) {
             Product myItem= null;
+
             if (productCode.equalsIgnoreCase("java")) {
                 Book myBook = new Book();
                 myBook.setCode(productCode);
