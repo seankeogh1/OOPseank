@@ -38,7 +38,4 @@ public class Fries implements Food {
     public String getDescription() {
         return description;
     }
-    public void addSalt(){
-
-    }
 }

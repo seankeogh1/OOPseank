@@ -14,18 +14,25 @@ public class JustApp {
         Pizza tuna = new Pizza(" Tuna Pizza", 8.99, "Surprisingly nice");
         Pizza classic = new Pizza("Plain ",6.99, "Boring");
         Fries curry = new Fries("curry",1.99,"nice also");
+        Dessert cheesecake = new Dessert("Cheesecake",5.99, "served with ice cream");
         //add all the orders to a collection
         items.add(cheeseBurger);
         items.add(tuna);
         items.add(curry);
+        items.add(cheesecake);
 
         //display all orders
         for(Food item : items)
         {
-            System.out.println(item.getName());
-            System.out.println(item.getPrice());
-            System.out.println(item.getDescription());
+            System.out.println("Name:" + item.getName());
+            System.out.println("Price: €" +  item.getPrice());
+            System.out.println("Description:" + item.getDescription());
         }
         //Find the total cost of the whole order
+        double totalCost = 0;
+        for( Food item : items){
+           totalCost = item.getPrice() + item.getPrice() + item.getPrice();
+        }
+        System.out.println("Total Cost: €"+ totalCost);
     }
 }
